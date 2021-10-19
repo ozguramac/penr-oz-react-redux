@@ -1,8 +1,10 @@
 version: '3'
 services:
   penr-oz-react-redux-install-weather:
-    image: &webpack-img jmfirth/webpack:latest
+    image: &webpack-img jmfirth/webpack:8-slim
     container_name: penr-oz-react-redux-install-weather
+    volumes:
+    - ./weather:/app
     entrypoint: &npm-install npm install --no-bin-links
 
   penr-oz-react-redux-weather:
@@ -13,3 +15,52 @@ services:
     entrypoint: &webpack-serve webpack-dev-server --hot --inline --progress --host 0.0.0.0
     ports:
     - "8080:8080"
+
+  penr-oz-react-redux-install-video-browser:
+    image: *webpack-img 
+    container_name: penr-oz-react-redux-install-video-browser
+    volumes:
+    - ./video_browser:/app
+    entrypoint: *npm-install
+
+  penr-oz-react-redux-video-browser:
+    image: *webpack-img
+    container_name: penr-oz-react-redux-video-browser
+    volumes:
+    - ./video_browser:/app
+    entrypoint: *webpack-serve
+    ports:
+    - "8081:8080"
+
+  penr-oz-react-redux-install-book-list:
+    image: *webpack-img 
+    container_name: penr-oz-react-redux-install-book-list
+    volumes:
+    - ./book_list:/app
+    entrypoint: *npm-install
+
+  penr-oz-react-redux-book-list:
+    image: *webpack-img
+    container_name: penr-oz-react-redux-book-list
+    volumes:
+    - ./book_list:/app
+    entrypoint: *webpack-serve
+    ports:
+    - "8082:8080"
+  
+  penr-oz-react-redux-install-blog:
+    image: *webpack-img 
+    container_name: penr-oz-react-redux-install-blog
+    volumes:
+    - ./blog:/app
+    entrypoint: *npm-install
+
+  penr-oz-react-redux-blog:
+    image: *webpack-img
+    container_name: penr-oz-react-redux-blog
+    volumes:
+    - ./blog:/app
+    entrypoint: *webpack-serve
+    ports:
+    - "8083:8080"
+  
