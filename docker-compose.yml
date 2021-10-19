@@ -1,0 +1,15 @@
+version: '3'
+services:
+  penr-oz-react-redux-install-weather:
+    image: &webpack-img jmfirth/webpack:latest
+    container_name: penr-oz-react-redux-install-weather
+    entrypoint: &npm-install npm install --no-bin-links
+
+  penr-oz-react-redux-weather:
+    image: *webpack-img
+    container_name: penr-oz-react-redux-weather
+    volumes:
+    - ./weather:/app
+    entrypoint: &webpack-serve webpack-dev-server --hot --inline --progress --host 0.0.0.0
+    ports:
+    - "8080:8080"
