@@ -7,6 +7,7 @@ For further reference, please consider the following sections:
 * [Docker Compose Overview](https://docs.docker.com/compose/overview/) 
 * [React Overview](https://reactjs.org/)
 * [Redux Overview](https://redux.js.org/)
+* [Google Maps API Key](https://developers.google.com/maps/documentation/javascript/error-messages#no-api-keys) needed for weather app
 
 ### Install
 ```
