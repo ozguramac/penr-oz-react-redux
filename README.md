@@ -21,8 +21,8 @@ $ docker-compose up penr-oz-react-redux-[weather|video_browser|book_list|blog]
 
 ### Use
 Access Webpack UI:
-- [weather](http://localhost:8080)
-- [video_browser](http://localhost:8081)
+- [video_browser](http://localhost:8080)
+- [weather](http://localhost:8081)
 - [book_list](http://localhost:8082)
 - [blog](http://localhost:8083)
 

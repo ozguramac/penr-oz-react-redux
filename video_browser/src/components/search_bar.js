@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+console.log(process.env.REACT_APP_GOOD_ENV)
+
 class SearchBar extends Component {
   constructor(props) {
     super(props);
