@@ -8,7 +8,7 @@ services:
   penr-oz-react-redux-install-video-browser:
     image: *webpack-img 
     container_name: penr-oz-react-redux-install-video-browser
-    volumes:24.147.2324.147.233.783.78
+    volumes:
     - ./video_browser:/app
     entrypoint: &npm-install npm install --no-bin-links
 
