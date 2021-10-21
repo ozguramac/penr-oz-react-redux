@@ -70,17 +70,19 @@ services:
     - "8083:8080"
   
   penr-oz-react-redux-install-semantic-ui-todos:
-    image: *webpack-img 
+    image: &node-img node:10-slim
     container_name: penr-oz-react-redux-install-semantic-ui-todos
     volumes:
     - ./semantic_ui_todos:/app
-    entrypoint: *npm-install
+    working_dir: /app
+    entrypoint: npm install
 
   penr-oz-react-redux-semantic-ui-todos:
-    image: *webpack-img
+    image: *node-img
     container_name: penr-oz-react-redux-semantic-ui-todos
     volumes:
     - ./semantic_ui_todos:/app
-    entrypoint: *webpack-serve
+    working_dir: /app
+    entrypoint: npm start
     ports:
-    - "8083:8080"
+    - "8084:3000"

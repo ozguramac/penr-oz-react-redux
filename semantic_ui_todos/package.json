@@ -12,12 +12,9 @@
     "semantic-ui-react": "^0.87.1"
   },
   "devDependencies": {
-    "dotenv-webpack": "~1.8.0",
     "enzyme": "^3.3.0",
     "react-scripts": "3.0.1",
-    "semantic-ui": "^2.3.0",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "semantic-ui": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

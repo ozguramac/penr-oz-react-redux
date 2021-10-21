@@ -25,6 +25,7 @@ Access Webpack UI:
 - [weather](http://localhost:8081)
 - [book_list](http://localhost:8082)
 - [blog](http://localhost:8083)
+- [semantic_ui_todos](http://localhost:8084)
 
 ### Stop
 ```
