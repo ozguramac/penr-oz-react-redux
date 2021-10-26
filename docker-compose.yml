@@ -86,3 +86,19 @@ services:
     entrypoint: npm start
     ports:
     - "8084:3000"
+
+  penr-oz-react-redux-install-storybook-example:
+    image: *webpack-img 
+    container_name: penr-oz-react-redux-install-storybook-example
+    volumes:
+    - ./storybook_example:/app
+    entrypoint: npm install
+
+  penr-oz-react-redux-storybook-example:
+    image: *webpack-img
+    container_name: penr-oz-react-redux-storybook-example
+    volumes:
+    - ./storybook_example:/app
+    entrypoint: npm run storybook
+    ports:
+    - "8085:9001"
