@@ -29,6 +29,7 @@ Access Webpack UI:
 - [blog](http://localhost:8083)
 - [semantic_ui_todos](http://localhost:8084)
 - [storybook_example](http://localhost:8085)
+- [styled_components](http://localhost:8086)
 
 ### Stop
 ```

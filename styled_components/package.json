@@ -1,0 +1,23 @@
+{
+  "name": "styled-components-example",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "~16.13.0",
+    "react-dom": "~16.13.0",
+    "react-scripts": "3.4.0",
+    "styled-components": "~5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --passWithNoTests",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

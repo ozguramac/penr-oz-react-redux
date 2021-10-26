@@ -102,3 +102,21 @@ services:
     entrypoint: npm run storybook
     ports:
     - "8085:9001"
+
+  penr-oz-react-redux-install-styled-components:
+    image: *node-img
+    container_name: penr-oz-react-redux-install-styled-components
+    volumes:
+    - ./styled_components:/app
+    working_dir: /app
+    entrypoint: npm install
+
+  penr-oz-react-redux-styled-components:
+    image: *node-img
+    container_name: penr-oz-react-redux-styled-components
+    volumes:
+    - ./styled_components:/app
+    working_dir: /app
+    entrypoint: npm start
+    ports:
+    - "8086:3000"
